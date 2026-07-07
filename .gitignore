@@ -370,3 +370,5 @@ $RECYCLE.BIN/
 
 # Clangd cache
 /.cache/clangd
+target/
+mcpp-index/

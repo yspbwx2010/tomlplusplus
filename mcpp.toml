@@ -1,0 +1,23 @@
+[package]
+name = "tomlplusplus"
+version = "3.4.0"
+license = "MIT"
+authors = ["Mark Gillard <mark.gillard@outlook.com.au>"]
+description = "Header-only TOML config file parser and serializer for C++17 (and later)"
+homepage = "https://github.com/marzer/tomlplusplus"
+
+[targets.tomlplusplus]
+kind = "lib"
+
+[toolchain]
+cxx_std = "c++20"
+
+[targets.basic_test]
+kind = "bin"
+main = "tests/basic_test.cpp"
+dependencies = { tomlplusplus = { path = "." } }
+
+[targets.simple]
+kind = "bin"
+main = "examples/simple.cpp"
+dependencies = { tomlplusplus = { path = "." } }
